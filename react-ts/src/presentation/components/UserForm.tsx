@@ -15,8 +15,8 @@ type Props = {
 };
 
 export default function UserForm({ onCreate, onNameDebounced }: Props) {
-  const [name, setName] = useState<any>("");
-  const [email, setEmail] = useState<any>("");
+  const [name, setName] = useState<any>("abc");
+  const [email, setEmail] = useState<any>("abc@test.com");
   const debouncedName = useDebouncedValue(name, 300);
 
   useEffect(() => {

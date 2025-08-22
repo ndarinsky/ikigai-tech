@@ -16,8 +16,6 @@ export default function UsersPage({ listUsers, getUser, createUser }: Props) {
 
   const [selectedId, setSelectedId] = useState<any>(null);
   const [details, setDetails] = useState<any>(null);
-  const [detailsLoading, setDetailsLoading] = useState<boolean>(false);
-  const [detailsError, setDetailsError] = useState<any>(null);
 
   const loadUsers = async () => {
     if (!listUsers) return;
@@ -36,17 +34,9 @@ export default function UsersPage({ listUsers, getUser, createUser }: Props) {
   const loadDetails = async (id: any) => {
     setSelectedId(id);
     if (!getUser) return;
-    setDetails(null);
-    setDetailsError(null);
-    setDetailsLoading(true);
-    try {
-      const u = await getUser(id);
-      setDetails(u || null);
-    } catch (e: any) {
-      setDetailsError(e?.message || String(e));
-    } finally {
-      setDetailsLoading(false);
-    }
+
+    const u = await getUser(id);
+    setDetails(u || null);
   };
 
   const handleCreate = async (data: any) => {
@@ -72,7 +62,7 @@ export default function UsersPage({ listUsers, getUser, createUser }: Props) {
           loading={listLoading}
           error={listError}
         />
-        <UserDetails user={details} loading={detailsLoading} error={detailsError} />
+        <UserDetails user={details} />
       </div>
     </div>
   );

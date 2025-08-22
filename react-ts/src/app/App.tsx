@@ -3,7 +3,6 @@ import './App.css'
 import UsersPage from '../presentation/pages/UserPage'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

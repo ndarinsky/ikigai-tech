@@ -1,0 +1,25 @@
+Interview Format
+• The session will be conducted online via the google meet link on your calendar invite.
+• You’ll be asked to share your screen during the entire coding exercise.
+• You’ll receive a REST API URL at the beginning of the session, which provides:
+• A POST endpoint to create a new user
+• A GET endpoint to retrieve the list of users
+• A GET endpoint to fetch user details
+
+Your Task
+
+You’ll build a small Web app that:
+1. Displays a form or web component to create a new user
+2. Displays user details based on the API response
+
+This is a very simple task and we are not concerned about UI designs or getting something on the screen that looks great. We are particularly interested in seeing how you apply Clean Architecture and SOLID principles in structuring your app — feel free to set up a simple layered structure (e.g. domain/data/presentation) that reflects your approach to maintainable, testable code. We are more interested in principles such as interface segregation, single responsibility principles applied to classes and layers over a completed task.
+
+What We’ll Be Assessing
+• Your ability to apply Clean Architecture in a practical Web context
+• Your communication and problem-solving skills during the session
+• Your fluency and familiarity with your Web platform of choice, including async handling and UI integration with REST APIs
+
+Preparation Tips
+• You may set up your dev environment in advance (Web Platform of choice, IDE, emulator, etc.) and create some boiler plate code.
+• You do not need to prepare much code ahead of time as this is a very simple task — the goal is to observe how you structure and think through the problem live
+• Keep your focus on clarity, modularity, and communication as you work
